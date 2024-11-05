@@ -1,0 +1,118 @@
+.one{
+    margin: 50px auto;
+width: 50px;
+height: 50px;
+position: relative;
+border-radius: 50%;
+border: 3px solid #e31b59;
+border-left: 3px solid transparent;
+animation-name: one-animation;
+animation-duration: 1s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
+
+.one::before{
+content: "";
+position: absolute;
+width: 65px;
+height:65px;
+border: 3px solid #2297ea;
+border-radius: 50%;
+border-top: 3px solid transparent;
+left:50%;
+top:50% ;
+transform: translate(-50%,-50%);
+
+}
+.one::after{
+    content: "";
+    position: absolute;
+    width: 90px;
+    height:90px;
+    border: 3px solid #fba700;
+    border-radius: 50%;
+    border-right: 3px solid transparent;
+    left:50%;
+    top:50% ;
+    transform: translate(-50%,-50%);
+
+}
+.one:hover{
+    animation-play-state:paused;
+}
+.two{
+margin: 20px auto;
+width: 50px;
+height: 50px;
+position: relative;
+border-radius: 50%;
+border: 5px solid #2297ea;
+border-bottom: 5px solid transparent;
+animation-name: one-animation;
+animation-duration: 1s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-play-state: paused;
+}
+
+.two::before{
+content: "";
+position: absolute;
+width: 65px;
+height:65px;
+border: 5px solid #fba700;
+border-radius: 50%;
+border-bottom: 5px solid transparent;
+left:-13px;
+top:-13px ;
+animation-name: one-animation;
+animation-duration: 5s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-play-state: paused;
+}
+.two::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height:80px;
+    border: 5px solid black;
+    border-radius: 50%;
+    border-bottom: 5px solid transparent;
+    left:-20px;
+    top:-20px ;
+    animation-name: one-animation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+.two:hover , .two:hover::before,.two:hover::after{
+    animation-play-state: running;
+}
+
+
+@keyframes one-animation{
+0%{
+    transform: rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+}
+.s1{
+    display: block;
+margin: 20px auto;
+width: 50px;
+height: 50px;
+position: relative;
+border-radius: 50%;
+border: 5px solid black;
+border-bottom: 5px solid transparent;
+animation-name: one-animation;
+animation-duration: 1s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: reverse;
+}

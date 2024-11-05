@@ -1,0 +1,25 @@
+.one div.main.red{
+    color: red;
+}
+.two .parent > div:nth-child(2){
+    color: red;
+}
+.three .parent > :only-child{
+    color: red;
+}
+.four > div[title]:not(.no-need){
+    color: red;
+}
+.five div:nth-child(2) div{
+    color: red;
+}
+.six div > div:nth-last-of-type(2):not(.no-need div){
+    color: red;
+}
+.seven div:first-child div:nth-child(5) {
+    color: red;
+}
+.eight p:first-of-type
+{
+    color: red;
+}
